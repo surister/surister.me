@@ -1,8 +1,12 @@
 <template>
 
-  <div class="">
-    <navbar></navbar>
-    <router-view></router-view>
+  <div>
+    <navbar ref="navbar"></navbar>
+    <div class="has-background-secondary">
+      <div class="container">
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 
 </template>
@@ -10,7 +14,12 @@
 import Navbar from "@/components/navbar";
 
 export default {
-  components: {Navbar}
+  components: {Navbar},
+  methods: {
+    test() {
+      this.$refs.navbar.$emit('Stick')
+    }
+  }
 }
 </script>
 
