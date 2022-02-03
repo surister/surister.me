@@ -1,8 +1,8 @@
 <template>
 
   <div>
-    <navbar ref="navbar"></navbar>
-    <div class="has-background-secondary">
+    <navbar :is_navbar_sticky="isNavbarSticky"></navbar>
+    <div class="has-background-secondary pt-6">
       <div class="container">
         <router-view></router-view>
       </div>
@@ -15,11 +15,24 @@ import Navbar from "@/components/navbar";
 
 export default {
   components: {Navbar},
-  methods: {
-    test() {
-      this.$refs.navbar.$emit('Stick')
+  data:function () {
+    return {
+      isNavbarSticky: true
     }
-  }
+  },
+
+  // created() {
+  //   window.addEventListener('scroll', this.handleScroll);
+  // },
+  // destroyed() {
+  //   window.removeEventListener('scroll', this.handleScroll);
+  // },
+  // methods: {
+  //   handleScroll() {
+  //     this.scrollPosition = window.scrollY
+  //     this.is_sticky = this.scrollPosition >= this.$refs["hero-body"].clientHeight + this.$refs["hero-head"].clientHeight;
+  //   }
+  // },
 }
 </script>
 

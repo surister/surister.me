@@ -15,9 +15,11 @@
     "@oruga-ui/oruga-next": "^0.5.3",
     "@oruga-ui/theme-bulma": "^0.2.1",
     "core-js": "^3.6.5",
+    "prismjs": "^1.26.0",
     "sass": "^1.43.4",
     "sass-loader": "^10.1.1",
     "vue": "^3.0.0",
+    "vue-prism-editor": "^2.0.0-alpha.2",
     "vue-router": "^4.0.0-0",
     "vuex": "^4.0.0-0"
   },

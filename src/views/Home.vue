@@ -1,6 +1,6 @@
 <template>
   <div class="home has-background-secondary">
-<!--    <img alt="Vue logo" src="@/assets/logo.png">-->
+    <!--    <img alt="Vue logo" src="@/assets/logo.png">-->
     <br>
     <div class="columns">
       <div class="column has-text-white">
@@ -14,23 +14,79 @@
             <li>Main topics will be Software Engineering, Python, Django and whatever new tech I pick up.</li>
             <li>I will try to write about advanced topics.</li>
             <li>To the best of my ability I will be concise and to the point.</li>
+
           </ul>
         </div>
+
       </div>
     </div>
+    <div class="columns">
+      <div class="column is-narrow">
+      <code-snippet :code_snippet="code" language="Python" version="3.10" ></code-snippet>
+      </div>
+    </div>
+
     <div style="height: 4000px"></div>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
 import Wednesday from "@/components/wednesday";
+import CodeSnippet from "@/components/CodeSnippet";
+
 export default {
   name: 'Home',
   components: {
-    Wednesday
+    CodeSnippet,
+    Wednesday,
+  },
+  data: function () {
+    return {
+      code: 'def accumulate(iterable, func=operator.add, *, initial=None):\n' +
+          '    \'Return running totals\'\n' +
+          '    # accumulate([1,2,3,4,5]) --> 1 3 6 10 15\n' +
+          '    # accumulate([1,2,3,4,5], initial=100) --> 100 101 103 106 110 115\n' +
+          '    # accumulate([1,2,3,4,5], operator.mul) --> 1 2 6 24 120\n' +
+          '    it = iter(iterable)\n' +
+          '    total = initial\n' +
+          '    if initial is None:\n' +
+          '        try:\n' +
+          '            total = next(it)\n' +
+          '        except StopIteration:\n' +
+          '            return\n' +
+          '    yield total\n' +
+          '    for element in it:\n' +
+          '        total = func(total, element)\n' +
+          '        yield total',
+      isHovering: false,
+
+
+    }
+  },
+  methods: {
+
   },
 
 }
 </script>
+<style>
+
+
+
+.my-editor {
+  background-color: #2b2b2b;
+  font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px;
+}
+
+.my-editor pre {
+  color: white;
+}
+
+/* optional class for removing the outline */
+.prism-editor__textarea:focus {
+  outline: none;
+}
+</style>
