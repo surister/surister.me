@@ -20,18 +20,19 @@
 
       </div>
     </div>
+    <p class="has-text-white pt-5">Look at this code component, isn't it sweet?</p><br>
     <div class="columns">
       <div class="column is-narrow">
       <code-snippet :code_snippet="code" language="Python" version="3.10" ></code-snippet>
       </div>
     </div>
 
-    <div style="height: 4000px"></div>
+<!--    <div style="height: 4000px"></div>-->
   </div>
 </template>
 
 <script>
-import Wednesday from "@/components/wednesday";
+import Wednesday from "@/components/Wednesday";
 import CodeSnippet from "@/components/CodeSnippet";
 
 export default {
@@ -72,21 +73,4 @@ export default {
 <style>
 
 
-
-.my-editor {
-  background-color: #2b2b2b;
-  font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 10px;
-}
-
-.my-editor pre {
-  color: white;
-}
-
-/* optional class for removing the outline */
-.prism-editor__textarea:focus {
-  outline: none;
-}
 </style>

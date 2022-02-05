@@ -2,20 +2,23 @@
 
   <div>
     <navbar :is_navbar_sticky="isNavbarSticky"></navbar>
-    <div class="has-background-secondary pt-6">
-      <div class="container">
+    <div class="has-background-secondary pt-8">
+      <div class="container is-fluid-mobile pb-6">
         <router-view></router-view>
       </div>
+      <sfooter></sfooter>
     </div>
   </div>
 
 </template>
 <script>
-import Navbar from "@/components/navbar";
+import Navbar from "@/components/Navbar";
+import Sfooter from "@/components/SFooter";
+
 
 export default {
-  components: {Navbar},
-  data:function () {
+  components: {Sfooter, Navbar},
+  data: function () {
     return {
       isNavbarSticky: true
     }
@@ -37,6 +40,7 @@ export default {
 </script>
 
 <style>
+.pt-8 {padding-top: 8rem}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
   font-family: 'Roboto', "Segoe UI", serif;

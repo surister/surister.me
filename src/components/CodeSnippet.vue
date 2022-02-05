@@ -2,16 +2,19 @@
   <div class="columns is-vcentered">
     <div class="column ">
 
-      <span class="pl-2 has-text-white">{{ language }} {{ version }}</span>
+      <span class="p-2 has-text-white has-background-editor has-top-rounded">{{ language }} {{ version }}</span>
 
-      <div style="position: relative" @mouseenter="showCopyButton" @mouseleave="showCopyButton">
-        <prism-editor class="my-editor"
+      <div style="position: relative"
+           @mouseenter="showCopyButton"
+           @mouseleave="showCopyButton">
+        <prism-editor class="my-editor has-background-editor"
                       v-model="code"
                       :highlight="highlighter"
                       line-numbers
                       :readonly="true"
-                      data-inline="3,5"
-        ></prism-editor>
+                      data-inline="3,5">
+
+        </prism-editor>
         <copy-button :ishidden="isBeingHovered"></copy-button>
       </div>
     </div>
@@ -38,7 +41,7 @@ export default {
     return {
       code: this.code_snippet,
       isBeingHovered: true,
-      highlightLines: [3,5]
+      highlightLines: [3, 5]
     }
   },
   mounted() {
@@ -64,7 +67,7 @@ export default {
 
     },
 
-    highlight(){
+    highlight() {
       this.highlightLineRange(this.highlightLines[0], this.highlightLines[1])
     },
 
@@ -77,11 +80,42 @@ export default {
   }
 }
 </script>
-
-<style >
+<style>
 .highlight-line {
   border-left: 5px solid green !important;
   background: #42b9832a !important;
 }
+
+.has-background-editor{
+  background-color: #2b2b2b;
+}
+.my-editor {
+
+  font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px;
+  -webkit-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.58);
+  -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.58);
+  box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.58);
+}
+
+.my-editor pre {
+  color: white;
+}
+
+/* optional class for removing the outline */
+.prism-editor__textarea:focus {
+  outline: none;
+}
+
+</style>
+<style scoped>
+
+.has-top-rounded {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px
+}
+
 
 </style>
