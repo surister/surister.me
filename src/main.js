@@ -10,10 +10,10 @@ import '../sass/style.scss'
 
 
 import { library, dom, } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faCopy, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faCopy, faTimesCircle, faRss } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faPython } from '@fortawesome/free-brands-svg-icons';
 
-library.add(faUser, faGithub, faCopy, faTimesCircle, faPython);
+library.add(faUser, faGithub, faCopy, faTimesCircle, faPython, faRss);
 dom.watch();
 
 

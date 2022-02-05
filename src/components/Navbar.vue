@@ -22,16 +22,16 @@
       <div class="hero-foot" ref="hero-navbar" style="height: 0">
         <nav class="navbar has-background-primary has-bottom-shadow" v-bind:class="{ 'is-fixed-top': is_sticky }">
           <div class="container">
-            <!--                    <div class="navbar-brand">-->
-            <!--                      <a class="navbar-item">-->
-            <!--                        <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">-->
-            <!--                      </a>-->
-            <!--                      <span class="navbar-burger" data-target="navbarMenuHeroA">-->
-            <!--                        <span></span>-->
-            <!--                        <span></span>-->
-            <!--                        <span></span>-->
-            <!--                      </span>-->
-            <!--                    </div>-->
+                                <div class="navbar-brand">
+                                  <a class="navbar-item">
+                                    <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
+                                  </a>
+                                  <span class="navbar-burger" data-target="navbarMenuHeroA">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                  </span>
+                                </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-start">
 
@@ -50,8 +50,11 @@
 
               </div>
               <div class="navbar-end">
-                <a class="navbar-item" href="https://www.github.com/surister" target="_blank">
+                <a class="navbar-item has-background-primary" href="https://www.github.com/surister" target="_blank">
                   <o-icon pack="fab" icon="github" size="large"></o-icon>
+                </a>
+                   <a class="navbar-item has-background-primary">
+                  <o-icon pack="fas" icon="rss" size="large"></o-icon>
                 </a>
               </div>
             </div>
@@ -90,20 +93,12 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 
 .has-bottom-shadow {
   -webkit-box-shadow: 0px 10px 5px -4px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 10px 5px -4px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 10px 5px -4px rgba(0, 0, 0, 0.5);
-}
-
-.router-link-active {
-  background-color: rebeccapurple;
-}
-
-.active {
-  background-color: rebeccapurple;
 }
 
 .has-border-top-rounded {

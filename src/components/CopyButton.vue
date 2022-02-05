@@ -2,6 +2,7 @@
   <o-tooltip v-bind:class="{ 'is-hidden': ishidden }"
              variant="primary clip-board-button"
              position="right"
+
              :active="isClicked" always>
     <template v-slot:content>
       Copied!
@@ -53,12 +54,10 @@ export default {
   },
   methods: {
     copyTextToClipboard(text) {
-      console.log('Copying')
-      console.log(text)
       if (!navigator.clipboard){
         return
       }
-      navigator.clipboard.writeText('asdf').then(function () {
+      navigator.clipboard.writeText(text).then(function () {
         /* clipboard successfully set */
       }, function () {
         /* clipboard write failed */

@@ -3,7 +3,7 @@
   <div>
     <navbar :is_navbar_sticky="isNavbarSticky"></navbar>
     <div class="has-background-secondary pt-8">
-      <div class="container is-fluid-mobile pb-6">
+      <div class="container p-5 pb-6">
         <router-view></router-view>
       </div>
       <sfooter></sfooter>

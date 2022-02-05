@@ -4,18 +4,18 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <div class="columns is-vcentered">
-        <div class="column has-text-right">
+        <div class="column has-text-right-tablet">
           <p>
             <strong>Surister.me</strong> by Surister © 2022<a href="https://jgthms.com"></a>
           </p></div>
-        <div class="column has-text-left">
+        <div class="column has-text-left-tablet">
           <follow-github-button></follow-github-button>
         </div>
       </div>
       <hr>
       <section class="has-text-centered">
         <p class="subtitle has-text-weight-medium">
-          Made with:
+          Handcrafted with:
         </p>
         <div class="columns">
           <div class="column">
@@ -36,15 +36,17 @@
           Tied together with:
         </p>
         <div class="columns has-text-centered is-centered is-vcentered">
-          <a href="https://oruga.io" target="_blank">
-            <div class="column is-paddingless">
-              <p class="image is-128x128">
+          <div class="column is-paddingless is-narrow">
+            <a href="https://oruga.io" target="_blank">
+              <p class="image is-128x128" style="margin: 0 auto">
                 <img alt="Oruga Logo" src="@/assets/images/orugalogo.png">
                 <span class="title has-text-weight-bold"> Oruga</span>
-              </p>
-            </div>
 
-          </a>
+              </p></a>
+
+          </div>
+
+
         </div>
       </section>
     </div>
