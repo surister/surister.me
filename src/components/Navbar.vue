@@ -22,16 +22,16 @@
       <div class="hero-foot" ref="hero-navbar" style="height: 0">
         <nav class="navbar has-background-primary has-bottom-shadow" v-bind:class="{ 'is-fixed-top': is_sticky }">
           <div class="container">
-                                <div class="navbar-brand">
-                                  <a class="navbar-item">
-                                    <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">
-                                  </a>
-                                  <span class="navbar-burger" data-target="navbarMenuHeroA">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                  </span>
-                                </div>
+<!--                                <div class="navbar-brand">-->
+<!--                                  <a class="navbar-item">-->
+<!--                                    <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">-->
+<!--                                  </a>-->
+<!--                                  <span class="navbar-burger" data-target="navbarMenuHeroA">-->
+<!--                                    <span></span>-->
+<!--                                    <span></span>-->
+<!--                                    <span></span>-->
+<!--                                  </span>-->
+<!--                                </div>-->
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-start">
 
