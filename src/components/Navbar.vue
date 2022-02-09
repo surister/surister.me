@@ -12,9 +12,7 @@
             <div class="column">
               <logo color="white"></logo>
             </div>
-
           </div>
-
         </div>
       </div>
 
@@ -22,16 +20,16 @@
       <div class="hero-foot" ref="hero-navbar" style="height: 0">
         <nav class="navbar has-background-primary has-bottom-shadow" v-bind:class="{ 'is-fixed-top': is_sticky }">
           <div class="container">
-<!--                                <div class="navbar-brand">-->
-<!--                                  <a class="navbar-item">-->
-<!--                                    <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">-->
-<!--                                  </a>-->
-<!--                                  <span class="navbar-burger" data-target="navbarMenuHeroA">-->
-<!--                                    <span></span>-->
-<!--                                    <span></span>-->
-<!--                                    <span></span>-->
-<!--                                  </span>-->
-<!--                                </div>-->
+            <!--                                <div class="navbar-brand">-->
+            <!--                                  <a class="navbar-item">-->
+            <!--                                    <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">-->
+            <!--                                  </a>-->
+            <!--                                  <span class="navbar-burger" data-target="navbarMenuHeroA">-->
+            <!--                                    <span></span>-->
+            <!--                                    <span></span>-->
+            <!--                                    <span></span>-->
+            <!--                                  </span>-->
+            <!--                                </div>-->
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-start">
 
@@ -44,7 +42,7 @@
                   ABOUT
                 </router-link>
                 <router-link class="navbar-item is-size-4 has-text-weight-medium pl-4 pr-4"
-                             to="about">
+                             to="faq">
                   FAQ
                 </router-link>
 
@@ -53,7 +51,7 @@
                 <a class="navbar-item has-background-primary" href="https://www.github.com/surister" target="_blank">
                   <o-icon pack="fab" icon="github" size="large"></o-icon>
                 </a>
-                   <a class="navbar-item has-background-primary">
+                <a class="navbar-item has-background-primary">
                   <o-icon pack="fas" icon="rss" size="large"></o-icon>
                 </a>
               </div>

@@ -2,7 +2,7 @@
 
   <div>
     <navbar :is_navbar_sticky="isNavbarSticky"></navbar>
-    <div class="has-background-secondary pt-8">
+    <div class="has-background-secondary pt-6-rem">
       <div class="container p-5 pb-6">
         <router-view></router-view>
       </div>
@@ -40,7 +40,7 @@ export default {
 </script>
 
 <style>
-.pt-8 {padding-top: 8rem}
+.pt-6-rem {padding-top: 6rem}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 body {
   font-family: 'Roboto', "Segoe UI", serif;

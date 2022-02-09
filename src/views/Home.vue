@@ -1,7 +1,6 @@
 <template>
   <div class="home has-background-secondary">
     <!--    <img alt="Vue logo" src="@/assets/logo.png">-->
-    <br>
     <div class="columns">
       <div class="column has-text-white">
         <div class="title has-text-white">Welcome to <i>Surister.me</i> - Yet Another Tech blog! <br><span

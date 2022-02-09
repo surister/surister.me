@@ -60,7 +60,8 @@ import VueLogo from "@/components/logos/VueLogo";
 
 export default {
   name: "sfooter",
-  components: {VueLogo, FollowGithubButton}
+  components: {VueLogo, FollowGithubButton},
+
 }
 </script>
 

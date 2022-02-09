@@ -15,7 +15,8 @@
                       data-inline="3,5">
 
         </prism-editor>
-        <copy-button :ishidden="isBeingHovered"></copy-button>
+
+        <copy-button v-if="clipboard" :ishidden="isBeingHovered"></copy-button>
       </div>
     </div>
   </div>
@@ -36,12 +37,37 @@ export default {
     CopyButton,
     PrismEditor
   },
-  props: ['code_snippet', 'language', 'version'],
+
+  // ['content', 'language', 'version', 'clipboard', 'highlightRange']
+  props: {
+    content: {
+      type: String,
+      required: true,
+    },
+    language: {
+      type: String,
+      required: true
+    },
+    version: {
+      type: String,
+      required: false
+    },
+    clipboard : {
+      type: Boolean,
+      required: false,
+      default: false
+    },
+    highlightRange: {
+      type: Array,
+      required: false,
+    }
+
+  },
   data: function () {
     return {
-      code: this.code_snippet,
+      code: this.content,
       isBeingHovered: true,
-      highlightLines: [3, 5]
+      highlightLines: this.highlightRange
     }
   },
   mounted() {
@@ -68,7 +94,10 @@ export default {
     },
 
     highlight() {
-      this.highlightLineRange(this.highlightLines[0], this.highlightLines[1])
+      if (this.highlightRange) {
+        this.highlightLineRange(this.highlightLines[0], this.highlightLines[1])
+      }
+
     },
 
     highlightLineNumber(number) {
