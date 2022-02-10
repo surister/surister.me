@@ -17,16 +17,14 @@
         <p class="subtitle has-text-weight-medium">
           Handcrafted with:
         </p>
-        <div class="columns">
-          <div class="column">
+        <div class="columns is-centered is-vcentered">
+          <div class="column is-narrow">
             <a href="https://bulma.io" target="_blank">
               <img alt="Bulma css logo" style="margin-left: 10px" height="64" width="256"
                    src="https://bulma.io/images/bulma-logo.png">
             </a>
           </div>
-        </div>
-        <div class="columns">
-          <div class="column">
+          <div class="column is-narrow">
             <a href="https://vuejs.org" target="_blank">
               <vue-logo></vue-logo>
             </a>

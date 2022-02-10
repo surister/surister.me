@@ -2,7 +2,6 @@
   <o-tooltip v-bind:class="{ 'is-hidden': ishidden }"
              variant="primary clip-board-button"
              position="right"
-
              :active="isClicked" always>
     <template v-slot:content>
       Copied!

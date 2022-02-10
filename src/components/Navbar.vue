@@ -20,23 +20,21 @@
       <div class="hero-foot" ref="hero-navbar" style="height: 0">
         <nav class="navbar has-background-primary has-bottom-shadow" v-bind:class="{ 'is-fixed-top': is_sticky }">
           <div class="container">
-            <!--                                <div class="navbar-brand">-->
-            <!--                                  <a class="navbar-item">-->
-            <!--                                    <img src="https://bulma.io/images/bulma-type-white.png" alt="Logo">-->
-            <!--                                  </a>-->
-            <!--                                  <span class="navbar-burger" data-target="navbarMenuHeroA">-->
-            <!--                                    <span></span>-->
-            <!--                                    <span></span>-->
-            <!--                                    <span></span>-->
-            <!--                                  </span>-->
-            <!--                                </div>-->
-            <div id="navbarMenuHeroB" class="navbar-menu">
-              <div class="navbar-start">
+            <div class="navbar-brand">
 
+              <span class="navbar-burger has-text-white" :class="{ 'is-active': isBurgerMenuActive }"
+                    data-target="navbarMenuHeroA"
+                    @click="isBurgerMenuActive =  !isBurgerMenuActive">
+                                                <span></span>
+                                                <span></span>
+                                                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroB" class="navbar-menu" :class="{ 'is-active': isBurgerMenuActive }">
+              <div class="navbar-start">
                 <router-link class="navbar-item  is-size-4 has-text-weight-medium pl-4 pr-4" to="/">
                   HOME
                 </router-link>
-
                 <router-link class="navbar-item is-size-4 has-text-weight-medium pl-4 pr-4"
                              to="about">
                   ABOUT
@@ -45,7 +43,10 @@
                              to="faq">
                   FAQ
                 </router-link>
-
+                <router-link class="navbar-item is-size-4 has-text-weight-medium pl-4 pr-4"
+                             to="faq">
+                  READ
+                </router-link>
               </div>
               <div class="navbar-end">
                 <a class="navbar-item has-background-primary" href="https://www.github.com/surister" target="_blank">
@@ -60,7 +61,6 @@
         </nav>
       </div>
     </section>
-
   </div>
 </template>
 
@@ -73,6 +73,7 @@ export default {
   data: function () {
     return {
       is_sticky: false,
+      isBurgerMenuActive: false
     }
   },
   computed: {},
@@ -92,7 +93,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .has-bottom-shadow {
   -webkit-box-shadow: 0px 10px 5px -4px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 10px 5px -4px rgba(0, 0, 0, 0.5);
@@ -103,6 +103,4 @@ export default {
   border-top-left-radius: .25rem;
   border-top-right-radius: .25rem;
 }
-
-
 </style>

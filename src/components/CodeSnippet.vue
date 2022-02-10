@@ -1,9 +1,7 @@
 <template>
   <div class="columns is-vcentered">
     <div class="column ">
-
-      <span class="p-2 has-text-white has-background-editor has-top-rounded">{{ language }} {{ version }}</span>
-
+      <span class="p-3 has-text-danger is-size-7 has-background-editor has-top-rounded">{{ language }}-{{ version }}</span>
       <div style="position: relative"
            @mouseenter="showCopyButton"
            @mouseleave="showCopyButton">
@@ -15,7 +13,6 @@
                       data-inline="3,5">
 
         </prism-editor>
-
         <copy-button v-if="clipboard" :ishidden="isBeingHovered"></copy-button>
       </div>
     </div>

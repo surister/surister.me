@@ -25,7 +25,7 @@ export default {
     return {
       'content': `REGION = 'Europe'
 LANGUAGES = {'Python', 'JavaScript', 'Dart'}
-YEARS_AS_DEVELOPER = ${Math.floor((new Date() - new Date(2018, 3, 29)) / (1000*60*60*24)) / 365} # Constantly updating
+YEARS_AS_DEVELOPER = ${((new Date() - new Date(2018, 3, 29)) / (1000*60*60*24)) / 365} # Constantly updating
 FRAMEWORKS = {'Django', 'Django-drf', 'FastApi', 'Scrappy', 'Vue', 'Nuxtjs' ,'Flutter', 'Buefy'} # To name a few..
 JOB_HISTORY = {
     'current_job': {

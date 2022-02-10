@@ -22,7 +22,7 @@
     <p class="has-text-white pt-5">Look at this code component, isn't it sweet?</p><br>
     <div class="columns">
       <div class="column is-narrow">
-      <code-snippet :code_snippet="code" language="Python" version="3.10" ></code-snippet>
+      <code-snippet :code_snippet="code" language="Python" version="3.10" :content="code" :clipboard="true"></code-snippet>
       </div>
     </div>
 
