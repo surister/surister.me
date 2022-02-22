@@ -14,9 +14,6 @@ tags: Python,Design Patterns,Opinion
 </template>
 </text-index>
 
-
-
-
 <text-title anchor_id="title">
 <template #content>
 Lets have a look at this actually
@@ -35,8 +32,33 @@ into electronic typesetting, remaining essentially
 unchanged. It was popularised in the 1960s with the
 release of Letraset sheets containing Lorem Ipsum 
 passages, and more recently with desktop publishing 
-software like Aldus PageMaker including versions of 
-Lorem Ipsum.
+software like ¡ PageMaker including versions of
+aldus.------------------------------------------
+<br>
+
+Lorem Ipsum is simply dummy text of the printing 
+and typesetting industry. Lorem Ipsum has been the 
+industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and 
+scrambled it to make a type specimen book.Lorem Ipsum is simply dummy text of the printing 
+and typesetting industry. Lorem Ipsum has been the 
+industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and 
+scrambled it to make a type specimen book.
+
+Lorem Ipsum is simply dummy text of the printing 
+and typesetting industry. Lorem Ipsum has been the 
+industry's standard dummy text ever since the 1500s,
+when an unknown printer took a galley of type and 
+scrambled it to make a type specimen book.
+</template>
+</text-block>
+
+<text-block>
+<template #cont>
+
+
+fgu
 </template>
 </text-block>
 

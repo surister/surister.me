@@ -7,10 +7,10 @@
         <code-snippet language="Python" version="any" :content="content">
         </code-snippet>
 
-        <p class="subtitle has-text-white pt-3">
-          I have also used more languages, frameworks and programs in the past but <strong class="has-text-danger">this
-          is not
-          my cv.</strong>
+        <p class="subtitle has-text-white pt-5">
+          <strong class="has-text-white">This
+            is obviously not
+            my cv,</strong> <a class="has-text-link">contact</a> me for any further inquiry.
           <br>
         </p>
       </div>
