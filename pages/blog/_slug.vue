@@ -19,6 +19,49 @@
                     </span>
     </p>
     <nuxt-content class="pt-3" :document="article"/>
+    <hr>
+    <div class="has-text-centered">
+      <h1 class="title has-text-white is-3">Thanks for reading!</h1>
+    </div>
+    <div class="columns mt-6 is-vcentered is-centered ">
+      <div class="column is-half">
+        <nav class="level">
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="title mb-0">
+                <o-icon pack="fa" icon="face-laugh-beam" size="medium" variant="danger" :clickable="true"></o-icon>
+              </p>
+              <p class="title has-text-danger">789</p>
+            </div>
+
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="title mb-0">
+                <o-icon pack="fa" icon="face-kiss-wink-heart" size="medium" variant="danger" :clickable="true"></o-icon>
+              </p>
+              <p class="title has-text-danger">789</p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="title mb-0">
+                <o-icon pack="fa" icon="face-kiss-wink-heart" size="medium" variant="danger" :clickable="true"></o-icon>
+              </p>
+              <p class="title has-text-danger">789</p>
+            </div>
+          </div>
+          <div class="level-item has-text-centered">
+            <div>
+              <p class="title mb-0">
+                <o-icon pack="fa" icon="face-kiss-wink-heart" size="medium" variant="danger" :clickable="true"></o-icon>
+              </p>
+              <p class="title has-text-danger">789</p>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
   </article>
 </template>
 <script>

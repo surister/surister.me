@@ -1,12 +1,38 @@
+import {$content} from "@nuxt/content";
+
 const createSitemapRoutes = async () => {
   let routes = [];
   const { $content } = require('@nuxt/content')
-  if (posts === null || posts.length === 0)
-    posts = await $content('blog').fetch();
+  const posts = await $content('articles').fetch();
   for (const post of posts) {
     routes.push(`blog/${post.slug}`);
   }
   return routes;
+}
+
+const create = async (feed, args) => {
+  const [filePath, ext] = args;
+  const hostname = process.NODE_ENV === 'production' ? 'https://my-production-domain.com' : 'http://localhost:3000';
+  feed.options = {
+    title: "My Blog",
+    description: "Blog Stuff!",
+    link: `${hostname}/feed.${ext}`
+  }
+  const {$content} = require('@nuxt/content')
+
+  const posts = await $content('articles').fetch();
+
+  for (const post of posts) {
+    const url = `${hostname}/${filePath}/${post.slug}`;
+    const feedItem = {
+      title: post.title,
+      id: url,
+      link: url,
+      description: post.description,
+    }
+    feed.addItem(feedItem);
+  }
+  return feed;
 }
 
 
@@ -65,39 +91,10 @@ export default {
   feed: [
     {
       path: '/feed.xml',
-      async create(feed, args) {
-        const baseUrlArticles = 'https://mywebsite.com/articles'
-        const baseLinkFeedArticles = '/feed/articles'
-        const {$content} = require('@nuxt/content')
-        const articles = await $content('articles').fetch()
-
-        articles.forEach((article) => {
-          const url = `${baseUrlArticles}/${article.slug}`
-          feed.addItem({
-            id: article.slug,
-            link: url,
-            title: article.title,
-            description: article.description,
-            tags: article.tags,
-            date: new Date(article.createdAt)
-          })
-        })
-
-        feed.addContributor({
-          name: 'Surister',
-          email: 'contact@surister.me',
-          link: 'https://surister.me'
-        })
-
-        feed.options = {
-          title: "Surister's Programming Blog",
-          link: 'https://surister.me/feed.xml',
-          description: 'This is my personal feed!',
-          language: "en",
-          favicon: "https://surister.me/favicons/favicon.ico",
-          copyright: "All rights reserverd 2022, Surister",
-        }
-      },
+      create,
+      // async create(feed, args) {
+      //
+      // },
       cacheTime: 1000 * 60 * 15,
       type: 'rss2',
       data: ['blog', 'xml', 'title']
@@ -120,7 +117,7 @@ export default {
 
   // Site Maps
   sitemap: {
-    hostname: 'https://my-domain-name.com',
+    hostname: 'http://localhost:3000',
     gzip: true,
     routes: createSitemapRoutes
   },
