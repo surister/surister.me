@@ -21,7 +21,7 @@
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@oruga-ui/oruga": "^0.4.8",
-    "@oruga-ui/theme-bulma": "github:oruga-ui/theme-bulma",
+    "@oruga-ui/theme-bulma": "^0.2.4",
     "core-js": "^3.19.3",
     "nuxt": "^2.15.8",
     "prismjs": "^1.26.0",
