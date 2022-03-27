@@ -12,10 +12,10 @@ const createSitemapRoutes = async () => {
 
 const create = async (feed, args) => {
   const [filePath, ext] = args;
-  const hostname = process.NODE_ENV === 'production' ? 'https://my-production-domain.com' : 'http://localhost:3000';
+  const hostname = process.NODE_ENV === 'production' ? 'https://surister.me' : 'http://localhost:3000';
   feed.options = {
-    title: "My Blog",
-    description: "Blog Stuff!",
+    title: "Surister's tech blog",
+    description: "Blog about Python and Software Engineering",
     link: `${hostname}/feed.${ext}`
   }
   const {$content} = require('@nuxt/content')
@@ -40,7 +40,7 @@ export default {
   target: 'static',
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'test',
+    title: 'Surister.me',
     htmlAttrs: {
       lang: 'en'
     },
